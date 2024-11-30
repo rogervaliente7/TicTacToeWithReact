@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body{
+  background-color: rgb(171, 26, 135);
+  color:#fff;
+}
+main{
+  width: 300px;
+  margin: 50px auto 0;
+}
+div.board{
+  display: grid;
+  border: 2px solid #fff;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgba(26, 219, 184, 0.737);
+}
+div.square{
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  font-size: 4rem;
+  text-align: center;
+  transition: all 0.3s ease; /* Transición suave para hover */
+  cursor: pointer; /* interactivo */
+}
+div.square:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+  transform: scale(1.05); /* Agranda ligeramente el cuadrado */
+  opacity: 0.9; /* Reduce la opacidad para el efecto de botón */
+}
+div.result{
+  font-size: 2rem;
+  padding: 10px;
+}
+div.result.green{
+  background-color: #5a5;
+}
+div.result.red{
+  background-color: #a55;
+}
+
+.restart-button {
+  display: block;
+  margin: 22px auto; /* Centra horizontalmente y añade espacio */
+  padding: 12px 20px; /* Añade espacio interno al botón */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Fuente en negrita */
+  color: white; /* Color del texto */
+  background-color: #4CAF50; /* Color de fondo (verde) */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+.restart-button:hover {
+  background-color: #45a049; /* Fondo más oscuro al pasar el mouse */
+  transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem; /* Tamaño del texto */
+  margin-bottom: 20px; /* Espacio debajo del título */
+  color: #fff; /* Color del texto */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  font-weight: bold; /* Negrita */
+}
